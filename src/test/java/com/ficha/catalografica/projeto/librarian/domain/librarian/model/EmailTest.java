@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 public class EmailTest {
 
   @Test
+  @DisplayName("constructor should throw IllegalArgumentException when email is invalid")
   public void constructor_shouldThrowIllegalArgumentException_whenEmailIsInvalid() {
     // Arrange
     List<String> invalidEmails = List.of("",
@@ -30,6 +31,7 @@ public class EmailTest {
   }
 
   @Test
+  @DisplayName("constructor should define value property when email is valid")
   public void constructor_shouldDefineValueProperty_whenEmailIsValid() {
     // Arrange
     List<String> validEmails = List.of("test@test.com",

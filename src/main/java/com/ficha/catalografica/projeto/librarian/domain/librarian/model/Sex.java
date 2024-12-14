@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum Sex {
-  MASCULINE("masculino"), FEMININE("feminino");
+  MALE("male"), FEMININE("female");
 
   private final String value;
 
@@ -12,13 +12,13 @@ public enum Sex {
     this.value = value;
   }
 
-  public static Sex parse(String value) {
+  public static Sex parse(String value) throws IllegalArgumentException {
     for (Sex sex : Sex.values()) {
       if (sex.value.equals(value))
         return sex;
     }
 
-    throw new IllegalArgumentException("Invalid value for sex. Only permitted: 'masculino', 'feminino'");
+    throw new IllegalArgumentException("Invalid value for sex. Only permitted: 'male', 'female'");
   }
 
 }

@@ -2,6 +2,7 @@ package com.ficha.catalografica.projeto.librarian.domain.librarian.model;
 
 import java.time.LocalDate;
 
+import io.micrometer.common.util.StringUtils;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -27,9 +28,9 @@ public class Librarian {
 
   public Librarian(LibrarianInfo librarianInfo, Email email, Password password, String crb) throws IllegalArgumentException {
     if (librarianInfo == null)
-      throw new IllegalArgumentException("LibrarianInfo cannot be null");
-    if (crb == null)
-      throw new IllegalArgumentException("crb cannot be null");
+      throw new IllegalArgumentException("librarianInfo cannot be null");
+    if (StringUtils.isBlank(crb))
+      throw new IllegalArgumentException("crb cannot be null or empty");
 
     this.id = new LibrarianId();
     this.librarianInfo = librarianInfo;
