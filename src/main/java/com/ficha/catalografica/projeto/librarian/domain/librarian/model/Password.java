@@ -21,7 +21,7 @@ public class Password {
   }
 
   public static Password fromRaw(String rawPassword) throws IllegalArgumentException {
-    if (isPasswordValid(rawPassword))
+    if (!isPasswordValid(rawPassword))
       throw new IllegalArgumentException("Password does not meet the criteria");
 
     return new Password(hashPassword(rawPassword));
