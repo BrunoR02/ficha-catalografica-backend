@@ -33,7 +33,7 @@ public class SexTest {
     values.forEach(value -> {
       Assertions.assertThatThrownBy(() -> Sex.parse(value))
           .isInstanceOf(IllegalArgumentException.class)
-          .hasMessage("Invalid value for sex. Only permitted: 'male', 'female'");
+          .hasMessage("Invalid value for Sex. Only permitted: 'male', 'female'");
     });
   }
 }

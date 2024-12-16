@@ -1,6 +1,5 @@
 package com.ficha.catalografica.projeto.cataloging.domain.record.valueobject;
 
-import io.micrometer.common.util.StringUtils;
 import lombok.Getter;
 
 @Getter
@@ -12,12 +11,12 @@ public class BookMetadata {
 
   private final BookSeries series;
 
-  private final String isbn;
+  private final ISBN isbn;
 
-  public BookMetadata(String isbn, int pages, BookEdition edition, BookDimensions dimensions, BookSeries series,
-      boolean hasIllustration, boolean hasColor) {
-    if (StringUtils.isBlank(isbn))
-      throw new IllegalArgumentException("isbn cannot be null or empty");
+  public BookMetadata(BookEdition edition, BookDimensions dimensions, BookSeries series,
+      ISBN isbn) {
+    if (isbn == null)
+      throw new IllegalArgumentException("isbn cannot be null");
 
     this.edition = edition;
     this.dimensions = dimensions;
