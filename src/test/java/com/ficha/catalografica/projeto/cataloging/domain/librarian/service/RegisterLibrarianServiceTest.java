@@ -17,13 +17,13 @@ import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.exception.AlreadyExistsException;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.LibrarianInfo;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Password;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Sex;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.LibrarianExistsPort;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.RegisterLibrarianPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianInfo;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Password;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Sex;
 
 @ExtendWith(SpringExtension.class)
 @DisplayName("RegisterLibrarianService Unit Tests")

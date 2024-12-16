@@ -12,7 +12,7 @@ import lombok.Getter;
 
 import java.time.LocalDate;
 
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Sex;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Sex;
 
 @Getter
 @Builder

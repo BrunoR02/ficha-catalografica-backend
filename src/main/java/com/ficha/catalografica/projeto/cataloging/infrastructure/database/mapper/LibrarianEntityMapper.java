@@ -1,10 +1,10 @@
 package com.ficha.catalografica.projeto.cataloging.infrastructure.database.mapper;
 
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.LibrarianId;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.LibrarianInfo;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Password;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianId;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianInfo;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Password;
 import com.ficha.catalografica.projeto.cataloging.infrastructure.database.entity.LibrarianEntity;
 
 public class LibrarianEntityMapper {

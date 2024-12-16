@@ -1,4 +1,4 @@
-package com.ficha.catalografica.projeto.cataloging.domain.librarian.model;
+package com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject;
 
 import java.util.List;
 

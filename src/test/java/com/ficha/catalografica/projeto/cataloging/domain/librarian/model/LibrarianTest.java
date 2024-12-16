@@ -6,6 +6,11 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianInfo;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Password;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Sex;
+
 @DisplayName("Librarian Unit Tests")
 public class LibrarianTest {
 

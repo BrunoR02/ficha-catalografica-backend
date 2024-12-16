@@ -2,8 +2,8 @@ package com.ficha.catalografica.projeto.cataloging.infrastructure.database.adapt
 
 import org.springframework.stereotype.Repository;
 
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.LibrarianExistsPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
 import com.ficha.catalografica.projeto.cataloging.infrastructure.database.repository.LibrarianRepository;
 
 import lombok.RequiredArgsConstructor;

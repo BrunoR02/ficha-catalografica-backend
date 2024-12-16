@@ -1,11 +1,11 @@
 package com.ficha.catalografica.projeto.cataloging.application.mapper;
 
 import com.ficha.catalografica.projeto.cataloging.application.command.RegisterLibrarianCommand;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.LibrarianInfo;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Password;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Sex;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianInfo;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Password;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Sex;
 
 public class LibrarianMapper {
 

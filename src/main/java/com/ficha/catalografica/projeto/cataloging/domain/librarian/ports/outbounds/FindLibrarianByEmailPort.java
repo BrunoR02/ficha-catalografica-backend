@@ -2,8 +2,8 @@ package com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbou
 
 import java.util.Optional;
 
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
 
 public interface FindLibrarianByEmailPort {
 

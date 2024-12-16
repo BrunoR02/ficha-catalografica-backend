@@ -1,21 +1,20 @@
-package com.ficha.catalografica.projeto.cataloging.domain.librarian.model;
+package com.ficha.catalografica.projeto.cataloging.domain.record.valueobject;
 
 import java.util.UUID;
 
-public class LibrarianId {
+import lombok.Getter;
+
+@Getter
+public class CatalogRecordId {
 
   private final String value;
 
-  public LibrarianId() {
-    value = UUID.randomUUID().toString();
-  }
-
-  public LibrarianId(String value) {
+  public CatalogRecordId(String value) {
     this.value = value;
   }
 
-  public String getValue() {
-    return value;
+  public CatalogRecordId() {
+    this.value = UUID.randomUUID().toString();
   }
 
   @Override
@@ -34,7 +33,7 @@ public class LibrarianId {
       return false;
     if (getClass() != obj.getClass())
       return false;
-    LibrarianId other = (LibrarianId) obj;
+    CatalogRecordId other = (CatalogRecordId) obj;
     if (value == null) {
       if (other.value != null)
         return false;
@@ -42,5 +41,4 @@ public class LibrarianId {
       return false;
     return true;
   }
-
 }

@@ -2,6 +2,11 @@ package com.ficha.catalografica.projeto.cataloging.domain.librarian.model;
 
 import java.time.LocalDate;
 
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianId;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianInfo;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Password;
+
 import io.micrometer.common.util.StringUtils;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
