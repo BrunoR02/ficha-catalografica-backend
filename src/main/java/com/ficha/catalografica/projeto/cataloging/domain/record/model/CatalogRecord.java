@@ -50,7 +50,7 @@ public class CatalogRecord {
       RecordClassification classification) {
     if (creatorId == null)
       throw new IllegalArgumentException("creatorId cannot be null");
-    if (responsabilities.size() == 0)
+    if (responsabilities == null || responsabilities.size() == 0)
       throw new IllegalArgumentException("At least one responsability is required");
     if (workMetadata == null)
       throw new IllegalArgumentException("workMetadata cannot be null");
@@ -60,7 +60,7 @@ public class CatalogRecord {
       throw new IllegalArgumentException("publisherName cannot be null or empty");
     if (bookMetadata == null)
       throw new IllegalArgumentException("bookMetadata cannot be null");
-    if (secondarySubjects.size() == 0)
+    if (secondarySubjects == null || secondarySubjects.size() == 0)
       throw new IllegalArgumentException("At least one secondarySubject is required");
     if (classification == null)
       throw new IllegalArgumentException("classification cannot be null");
