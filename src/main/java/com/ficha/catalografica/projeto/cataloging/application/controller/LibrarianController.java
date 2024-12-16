@@ -12,8 +12,8 @@ import com.ficha.catalografica.projeto.cataloging.application.command.RegisterLi
 import com.ficha.catalografica.projeto.cataloging.application.mapper.LibrarianMapper;
 import com.ficha.catalografica.projeto.cataloging.application.response.LoginLibrarianResponse;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.inbounds.LoginLibrarianUseCase;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.inbounds.RegisterLibrarianUseCase;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.inbound.LoginLibrarianUseCase;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.inbound.RegisterLibrarianUseCase;
 import com.ficha.catalografica.projeto.common.service.TokenService;
 
 import lombok.RequiredArgsConstructor;

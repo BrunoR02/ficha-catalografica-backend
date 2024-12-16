@@ -1,8 +1,8 @@
-package com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds;
+package com.ficha.catalografica.projeto.cataloging.domain.librarian.port.inbound;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
 
-public interface RegisterLibrarianPort {
+public interface RegisterLibrarianUseCase {
   
   void registerLibrarian(Librarian librarian);
 }

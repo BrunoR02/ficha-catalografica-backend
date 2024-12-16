@@ -4,9 +4,9 @@ import org.springframework.stereotype.Service;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.exception.InvalidCredentialsException;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.inbounds.LoginLibrarianUseCase;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.FindLibrarianByCrbPort;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.FindLibrarianByEmailPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.inbound.LoginLibrarianUseCase;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.FindLibrarianByCrbPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.FindLibrarianByEmailPort;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
 
 import lombok.RequiredArgsConstructor;

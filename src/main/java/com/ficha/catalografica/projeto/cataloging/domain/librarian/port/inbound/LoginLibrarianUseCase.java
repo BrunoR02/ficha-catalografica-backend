@@ -1,4 +1,4 @@
-package com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.inbounds;
+package com.ficha.catalografica.projeto.cataloging.domain.librarian.port.inbound;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
 

@@ -4,9 +4,9 @@ import org.springframework.stereotype.Service;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.exception.AlreadyExistsException;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.inbounds.RegisterLibrarianUseCase;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.LibrarianExistsPort;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.RegisterLibrarianPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.inbound.RegisterLibrarianUseCase;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.LibrarianExistsPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.RegisterLibrarianPort;
 
 import lombok.RequiredArgsConstructor;
 

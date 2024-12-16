@@ -16,7 +16,7 @@ public enum UniversityWorkType {
     }
 
     throw new IllegalArgumentException(
-        "Invalid value for universityWorkType. Only permitted: 'graduation', 'specialization', 'master', 'doctorate'");
+        "Invalid value for UniversityWorkType. Only permitted: 'graduation', 'specialization', 'master', 'doctorate'");
   }
 
 }

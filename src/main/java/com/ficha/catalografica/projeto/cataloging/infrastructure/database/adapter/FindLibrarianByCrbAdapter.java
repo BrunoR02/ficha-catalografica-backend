@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Repository;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.FindLibrarianByCrbPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.FindLibrarianByCrbPort;
 import com.ficha.catalografica.projeto.cataloging.infrastructure.database.mapper.LibrarianEntityMapper;
 import com.ficha.catalografica.projeto.cataloging.infrastructure.database.repository.LibrarianRepository;
 

@@ -3,7 +3,7 @@ package com.ficha.catalografica.projeto.cataloging.infrastructure.database.adapt
 import org.springframework.stereotype.Repository;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.RegisterLibrarianPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.RegisterLibrarianPort;
 import com.ficha.catalografica.projeto.cataloging.infrastructure.database.mapper.LibrarianEntityMapper;
 import com.ficha.catalografica.projeto.cataloging.infrastructure.database.repository.LibrarianRepository;
 

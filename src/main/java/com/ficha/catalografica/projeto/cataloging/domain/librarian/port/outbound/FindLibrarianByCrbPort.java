@@ -1,4 +1,4 @@
-package com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds;
+package com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound;
 
 import java.util.Optional;
 

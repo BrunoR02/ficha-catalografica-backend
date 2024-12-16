@@ -18,7 +18,7 @@ public enum Sex {
         return sex;
     }
 
-    throw new IllegalArgumentException("Invalid value for sex. Only permitted: 'male', 'female'");
+    throw new IllegalArgumentException("Invalid value for Sex. Only permitted: 'male', 'female'");
   }
 
 }

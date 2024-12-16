@@ -18,8 +18,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.exception.AlreadyExistsException;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.LibrarianExistsPort;
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.ports.outbounds.RegisterLibrarianPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.LibrarianExistsPort;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.RegisterLibrarianPort;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianInfo;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Password;
