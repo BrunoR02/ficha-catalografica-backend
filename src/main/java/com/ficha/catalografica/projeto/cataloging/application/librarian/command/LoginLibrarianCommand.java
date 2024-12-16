@@ -1,4 +1,4 @@
-package com.ficha.catalografica.projeto.cataloging.application.command;
+package com.ficha.catalografica.projeto.cataloging.application.librarian.command;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

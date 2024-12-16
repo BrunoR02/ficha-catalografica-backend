@@ -2,6 +2,7 @@ package com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject;
 
 import java.util.UUID;
 
+import io.micrometer.common.util.StringUtils;
 import lombok.Getter;
 
 @Getter
@@ -14,6 +15,9 @@ public class LibrarianId {
   }
 
   public LibrarianId(String value) {
+    if (StringUtils.isBlank(value))
+      throw new IllegalArgumentException("librarianId value cannot be null or empty");
+
     this.value = value;
   }
 

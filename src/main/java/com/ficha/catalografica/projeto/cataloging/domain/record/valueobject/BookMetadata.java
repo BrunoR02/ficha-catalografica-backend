@@ -7,19 +7,19 @@ public class BookMetadata {
 
   private final BookEdition edition;
 
-  private final BookDimensions dimensions;
+  private final BookDimension dimension;
 
   private final BookSeries series;
 
   private final ISBN isbn;
 
-  public BookMetadata(BookEdition edition, BookDimensions dimensions, BookSeries series,
+  public BookMetadata(BookEdition edition, BookDimension dimension, BookSeries series,
       ISBN isbn) {
     if (isbn == null)
       throw new IllegalArgumentException("isbn cannot be null");
 
     this.edition = edition;
-    this.dimensions = dimensions;
+    this.dimension = dimension;
     this.series = series;
     this.isbn = isbn;
   }

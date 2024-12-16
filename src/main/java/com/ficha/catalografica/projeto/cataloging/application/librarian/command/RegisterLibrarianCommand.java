@@ -1,4 +1,4 @@
-package com.ficha.catalografica.projeto.cataloging.application.command;
+package com.ficha.catalografica.projeto.cataloging.application.librarian.command;
 
 import java.time.LocalDate;
 
@@ -7,11 +7,13 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class UpdateLibrarianCommand {
+public class RegisterLibrarianCommand {
 
   private String fullName;
 
   private String email;
+
+  private String password;
 
   private String sex;
 

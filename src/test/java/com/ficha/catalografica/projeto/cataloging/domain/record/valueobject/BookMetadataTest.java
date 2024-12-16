@@ -13,12 +13,12 @@ public class BookMetadataTest {
     // Arrange
     ISBN invalidISBN = null;
     BookEdition validBookEdition = new BookEdition(1, "test");
-    BookDimensions validBookDimensions = new BookDimensions(10, 20);
+    BookDimension validBookDimension = new BookDimension(10, 20);
     BookSeries validBookSeries = new BookSeries("Test", 2);
 
     // Act & Assert (invalid isbn case)
     Assertions
-        .assertThatThrownBy(() -> new BookMetadata(validBookEdition, validBookDimensions, validBookSeries, invalidISBN))
+        .assertThatThrownBy(() -> new BookMetadata(validBookEdition, validBookDimension, validBookSeries, invalidISBN))
         .isInstanceOf(IllegalArgumentException.class)
         .hasMessage("isbn cannot be null");
   }
@@ -29,11 +29,11 @@ public class BookMetadataTest {
     // Arrange
     ISBN validISBN = new ISBN("1234567891");
     BookEdition validBookEdition = new BookEdition(1, "test");
-    BookDimensions validBookDimensions = new BookDimensions(10, 20);
+    BookDimension validBookDimension = new BookDimension(10, 20);
     BookSeries validBookSeries = new BookSeries("Test", 2);
 
     // Act
-    BookMetadata bookMetadata = new BookMetadata(validBookEdition, validBookDimensions, validBookSeries, validISBN);
+    BookMetadata bookMetadata = new BookMetadata(validBookEdition, validBookDimension, validBookSeries, validISBN);
 
     // Assert
     Assertions.assertThat(bookMetadata)

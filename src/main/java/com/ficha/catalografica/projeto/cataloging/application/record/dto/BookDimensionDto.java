@@ -1,14 +1,13 @@
-package com.ficha.catalografica.projeto.cataloging.domain.record.valueobject;
+package com.ficha.catalografica.projeto.cataloging.application.record.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class BookDimensions {
+public class BookDimensionDto {
   
   private int width;
 
   private int height;
-  
 }

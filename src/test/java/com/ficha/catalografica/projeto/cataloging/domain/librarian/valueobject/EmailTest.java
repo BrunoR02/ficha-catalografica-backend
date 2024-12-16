@@ -45,6 +45,7 @@ public class EmailTest {
 
     // Assert
     emails.forEach(email -> {
+      Assertions.assertThat(email).isNotNull().isInstanceOf(Email.class);
       Assertions.assertThat(email.getValue()).isNotNull();
     });
   }

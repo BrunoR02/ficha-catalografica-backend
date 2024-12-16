@@ -1,4 +1,4 @@
-package com.ficha.catalografica.projeto.cataloging.application.controller;
+package com.ficha.catalografica.projeto.cataloging.application.librarian.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ficha.catalografica.projeto.cataloging.application.command.LoginLibrarianCommand;
-import com.ficha.catalografica.projeto.cataloging.application.command.RegisterLibrarianCommand;
-import com.ficha.catalografica.projeto.cataloging.application.mapper.LibrarianMapper;
-import com.ficha.catalografica.projeto.cataloging.application.response.LoginLibrarianResponse;
+import com.ficha.catalografica.projeto.cataloging.application.librarian.command.LoginLibrarianCommand;
+import com.ficha.catalografica.projeto.cataloging.application.librarian.command.RegisterLibrarianCommand;
+import com.ficha.catalografica.projeto.cataloging.application.librarian.mapper.LibrarianMapper;
+import com.ficha.catalografica.projeto.cataloging.application.librarian.response.LoginLibrarianResponse;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.inbound.LoginLibrarianUseCase;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.inbound.RegisterLibrarianUseCase;

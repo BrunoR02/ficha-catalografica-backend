@@ -1,6 +1,6 @@
-package com.ficha.catalografica.projeto.cataloging.application.mapper;
+package com.ficha.catalografica.projeto.cataloging.application.librarian.mapper;
 
-import com.ficha.catalografica.projeto.cataloging.application.command.RegisterLibrarianCommand;
+import com.ficha.catalografica.projeto.cataloging.application.librarian.command.RegisterLibrarianCommand;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianInfo;
