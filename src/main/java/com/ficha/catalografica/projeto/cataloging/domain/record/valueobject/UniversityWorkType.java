@@ -1,5 +1,8 @@
 package com.ficha.catalografica.projeto.cataloging.domain.record.valueobject;
 
+import lombok.Getter;
+
+@Getter
 public enum UniversityWorkType {
   GRADUATION("graduation"), SPECIALIZATION("specialization"), MASTER("master"), DOCTORATE("doctorate");
 

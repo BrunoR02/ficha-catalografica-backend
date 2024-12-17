@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ficha.catalografica.projeto.cataloging.application.record.command.CreateCatalogRecordCommand;
+import com.ficha.catalografica.projeto.cataloging.application.record.command.CreateUniversityCatalogRecordCommand;
 import com.ficha.catalografica.projeto.cataloging.application.record.dto.CatalogRecordDto;
+import com.ficha.catalografica.projeto.cataloging.application.record.dto.UniversityCatalogRecordDto;
 import com.ficha.catalografica.projeto.cataloging.application.record.mapper.CatalogRecordMapper;
+import com.ficha.catalografica.projeto.cataloging.application.record.mapper.UniversityCatalogRecordMapper;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianId;
 import com.ficha.catalografica.projeto.cataloging.domain.record.port.inbound.CreateCatalogRecordUseCase;
 import com.ficha.catalografica.projeto.cataloging.domain.record.port.inbound.FindCatalogRecordsByLibrarianUseCase;
@@ -38,13 +41,33 @@ public class CatalogRecordController {
   }
 
   @GetMapping("/{creatorId}")
-  public ResponseEntity<List<CatalogRecordDto>> createCatalogRecord(@PathVariable String creatorId) {
+  public ResponseEntity<List<CatalogRecordDto>> getCatalogRecordsByCreatorId(@PathVariable String creatorId) {
 
     List<CatalogRecordDto> catalogRecords = findCatalogRecordsByLibrarianUseCase
-        .findByLibrarianId(new LibrarianId(creatorId))
+        .findCatalogRecordsByLibrarianId(new LibrarianId(creatorId))
         .stream()
         .map(catalogRecord -> CatalogRecordMapper.toDto(catalogRecord)).toList();
 
     return new ResponseEntity<>(catalogRecords, HttpStatus.CREATED);
+  }
+
+  @PostMapping("/university")
+  public ResponseEntity<Void> createUniversityCatalogRecord(@RequestBody CreateUniversityCatalogRecordCommand command) {
+
+    createCatalogRecordUseCase.createUniversityCatalogRecord(UniversityCatalogRecordMapper.toDomain(command));
+
+    return new ResponseEntity<>(HttpStatus.CREATED);
+  }
+
+  @GetMapping("/university/{creatorId}")
+  public ResponseEntity<List<UniversityCatalogRecordDto>> getUniversityCatalogRecordsByCreatorId(
+      @PathVariable String creatorId) {
+
+    List<UniversityCatalogRecordDto> universityCatalogRecordDtos = findCatalogRecordsByLibrarianUseCase
+        .findUniversityCatalogRecordsByLibrarianId(new LibrarianId(creatorId))
+        .stream()
+        .map(universityCatalogRecord -> UniversityCatalogRecordMapper.toDto(universityCatalogRecord)).toList();
+
+    return new ResponseEntity<>(universityCatalogRecordDtos, HttpStatus.CREATED);
   }
 }
