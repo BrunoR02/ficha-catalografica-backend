@@ -26,10 +26,10 @@ import lombok.Getter;
 @Entity
 @Table(name = "catalog_records")
 @SecondaryTables({
-    @SecondaryTable(name = "cr_work_metadata", pkJoinColumns = @PrimaryKeyJoinColumn(referencedColumnName = "catalog_record_id")),
-    @SecondaryTable(name = "cr_publishing_data", pkJoinColumns = @PrimaryKeyJoinColumn(referencedColumnName = "catalog_record_id")),
-    @SecondaryTable(name = "cr_book_metadata", pkJoinColumns = @PrimaryKeyJoinColumn(referencedColumnName = "catalog_record_id")),
-    @SecondaryTable(name = "cr_record_classification", pkJoinColumns = @PrimaryKeyJoinColumn(referencedColumnName = "catalog_record_id")),
+    @SecondaryTable(name = "cr_work_metadata", pkJoinColumns = @PrimaryKeyJoinColumn(referencedColumnName = "id")),
+    @SecondaryTable(name = "cr_publishing_data", pkJoinColumns = @PrimaryKeyJoinColumn(referencedColumnName = "id")),
+    @SecondaryTable(name = "cr_book_metadata", pkJoinColumns = @PrimaryKeyJoinColumn(referencedColumnName = "id")),
+    @SecondaryTable(name = "cr_record_classification", pkJoinColumns = @PrimaryKeyJoinColumn(referencedColumnName = "id")),
 })
 public class CatalogRecordEntity {
 

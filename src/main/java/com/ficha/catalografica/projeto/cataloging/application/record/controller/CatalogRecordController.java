@@ -46,9 +46,10 @@ public class CatalogRecordController {
     List<CatalogRecordDto> catalogRecords = findCatalogRecordsByLibrarianUseCase
         .findCatalogRecordsByLibrarianId(new LibrarianId(creatorId))
         .stream()
-        .map(catalogRecord -> CatalogRecordMapper.toDto(catalogRecord)).toList();
+        .map(catalogRecord -> CatalogRecordMapper.toDto(catalogRecord))
+        .toList();
 
-    return new ResponseEntity<>(catalogRecords, HttpStatus.CREATED);
+    return new ResponseEntity<>(catalogRecords, HttpStatus.OK);
   }
 
   @PostMapping("/university")
@@ -66,8 +67,9 @@ public class CatalogRecordController {
     List<UniversityCatalogRecordDto> universityCatalogRecordDtos = findCatalogRecordsByLibrarianUseCase
         .findUniversityCatalogRecordsByLibrarianId(new LibrarianId(creatorId))
         .stream()
-        .map(universityCatalogRecord -> UniversityCatalogRecordMapper.toDto(universityCatalogRecord)).toList();
+        .map(universityCatalogRecord -> UniversityCatalogRecordMapper.toDto(universityCatalogRecord))
+        .toList();
 
-    return new ResponseEntity<>(universityCatalogRecordDtos, HttpStatus.CREATED);
+    return new ResponseEntity<>(universityCatalogRecordDtos, HttpStatus.OK);
   }
 }
