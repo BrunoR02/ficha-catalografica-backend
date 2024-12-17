@@ -1,8 +1,8 @@
-package com.ficha.catalografica.projeto.cataloging.infrastructure.database.repository;
+package com.ficha.catalografica.projeto.cataloging.infrastructure.librarian.database.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.ficha.catalografica.projeto.cataloging.infrastructure.database.entity.LibrarianEntity;
+import com.ficha.catalografica.projeto.cataloging.infrastructure.librarian.database.entity.LibrarianEntity;
 
 import java.util.Optional;
 

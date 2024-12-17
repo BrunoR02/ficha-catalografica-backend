@@ -7,8 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public class BookDimension {
   
-  private int width;
+  private final int width;
 
-  private int height;
+  private final int height;
   
 }

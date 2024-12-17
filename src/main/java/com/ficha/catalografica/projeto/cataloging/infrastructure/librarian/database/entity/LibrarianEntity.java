@@ -1,10 +1,10 @@
-package com.ficha.catalografica.projeto.cataloging.infrastructure.database.entity;
+package com.ficha.catalografica.projeto.cataloging.infrastructure.librarian.database.entity;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,9 +21,9 @@ import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.S
 @Table(name = "librarians")
 public class LibrarianEntity {
 
-  @EmbeddedId
+  @Id
   @Column(name = "id")
-  private String librarianId;
+  private String id;
 
   private String fullName;
 

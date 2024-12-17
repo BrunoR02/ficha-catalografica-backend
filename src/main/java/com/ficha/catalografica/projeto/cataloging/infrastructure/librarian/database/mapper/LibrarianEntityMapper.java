@@ -1,17 +1,17 @@
-package com.ficha.catalografica.projeto.cataloging.infrastructure.database.mapper;
+package com.ficha.catalografica.projeto.cataloging.infrastructure.librarian.database.mapper;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianId;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianInfo;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Password;
-import com.ficha.catalografica.projeto.cataloging.infrastructure.database.entity.LibrarianEntity;
+import com.ficha.catalografica.projeto.cataloging.infrastructure.librarian.database.entity.LibrarianEntity;
 
 public class LibrarianEntityMapper {
 
   public static LibrarianEntity toEntity(Librarian librarian) {
     return LibrarianEntity.builder()
-        .librarianId(librarian.getId().getValue())
+        .id(librarian.getId().getValue())
         .email(librarian.getEmail().getValue())
         .password(librarian.getPassword().getHashedValue())
         .crb(librarian.getCrb())
@@ -27,7 +27,7 @@ public class LibrarianEntityMapper {
     LibrarianInfo info = new LibrarianInfo(entity.getFullName(), entity.getSex(), entity.getBirthDate());
 
     return Librarian.builder()
-        .id(new LibrarianId(entity.getLibrarianId()))
+        .id(new LibrarianId(entity.getId()))
         .email(new Email(entity.getEmail()))
         .password(new Password(entity.getPassword()))
         .crb(entity.getCrb())

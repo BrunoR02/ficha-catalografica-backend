@@ -7,7 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public class BookSeries {
 
-  private String name;
+  private final String name;
 
-  private int number;
+  private final int number;
 }
