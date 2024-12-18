@@ -12,10 +12,40 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.exception.EntityExistsException;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.exception.InvalidCredentialsException;
 import com.ficha.catalografica.projeto.common.exception.ExceptionDetails;
 
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
+
+  @ExceptionHandler({ EntityExistsException.class })
+  protected ResponseEntity<ExceptionDetails> handleEntityExistsException(EntityExistsException exception) {
+
+    ExceptionDetails exceptionDetails = ExceptionDetails.builder()
+        .title(exception.getTitle())
+        .status(exception.getStatusCode().value())
+        .details(exception.getMessage())
+        .developerMessage(exception.getClass().getName())
+        .timestamp(LocalDateTime.now().toString())
+        .build();
+
+    return new ResponseEntity<>(exceptionDetails, exception.getStatusCode());
+  }
+
+  @ExceptionHandler({ InvalidCredentialsException.class })
+  protected ResponseEntity<ExceptionDetails> handleInvalidCredentialsException(InvalidCredentialsException exception) {
+
+    ExceptionDetails exceptionDetails = ExceptionDetails.builder()
+        .title(exception.getTitle())
+        .status(exception.getStatusCode().value())
+        .details(exception.getMessage())
+        .developerMessage(exception.getClass().getName())
+        .timestamp(LocalDateTime.now().toString())
+        .build();
+
+    return new ResponseEntity<>(exceptionDetails, exception.getStatusCode());
+  }
 
   @ExceptionHandler({ IllegalArgumentException.class })
   protected ResponseEntity<ExceptionDetails> handleIllegalArgumentException(Exception exception) {

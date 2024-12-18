@@ -20,6 +20,7 @@ public class FindLibrarianByEmailAdapter implements FindLibrarianByEmailPort {
 
   @Override
   public Optional<Librarian> findByEmail(Email email) {
+    
     return librarianRepository.findByEmail(email.getValue()).map(entity -> LibrarianEntityMapper.toDomain(entity));
   }
 }

@@ -11,7 +11,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 
 @Service
-public class TokenService {
+public class JwtTokenService {
 
   private static final String SECRET_KEY = "/c&#Hkv7Byn)&(N";
 

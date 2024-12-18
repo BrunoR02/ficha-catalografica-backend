@@ -7,11 +7,13 @@ import lombok.Getter;
 
 @ResponseStatus(value = HttpStatus.BAD_REQUEST)
 @Getter
-public class AlreadyExistsException extends RuntimeException {
+public class EntityExistsException extends RuntimeException {
+
+  private final String title = "Entity Exists Exception";
 
   private final HttpStatus statusCode = HttpStatus.BAD_REQUEST;
 
-  public AlreadyExistsException(String message) {
+  public EntityExistsException(String message) {
     super(message);
   }
 }

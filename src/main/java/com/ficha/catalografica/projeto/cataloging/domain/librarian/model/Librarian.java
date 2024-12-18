@@ -1,6 +1,6 @@
 package com.ficha.catalografica.projeto.cataloging.domain.librarian.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Email;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.LibrarianId;
@@ -25,9 +25,9 @@ public class Librarian {
 
   private final Password password;
 
-  private LocalDate registeredAt;
+  private LocalDateTime registeredAt;
 
-  private LocalDate updatedAt;
+  private LocalDateTime updatedAt;
 
   private final String crb;
 
@@ -41,8 +41,8 @@ public class Librarian {
     this.librarianInfo = librarianInfo;
     this.email = email;
     this.password = password;
-    this.registeredAt = LocalDate.now();
-    this.updatedAt = LocalDate.now();
+    this.registeredAt = LocalDateTime.now();
+    this.updatedAt = LocalDateTime.now();
     this.crb = crb;
   }
 

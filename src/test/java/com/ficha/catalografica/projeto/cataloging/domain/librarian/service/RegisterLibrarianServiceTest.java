@@ -16,7 +16,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.ficha.catalografica.projeto.cataloging.domain.librarian.exception.AlreadyExistsException;
+import com.ficha.catalografica.projeto.cataloging.domain.librarian.exception.EntityExistsException;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.model.Librarian;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.LibrarianExistsPort;
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.port.outbound.RegisterLibrarianPort;
@@ -54,7 +54,7 @@ public class RegisterLibrarianServiceTest {
 
     // Act & Assert
     Assertions.assertThatThrownBy(() -> registerLibrarianService.registerLibrarian(testLibrarian))
-        .isInstanceOf(AlreadyExistsException.class)
+        .isInstanceOf(EntityExistsException.class)
         .hasMessage("Already exists a librarian registered with this email");
 
     // Verify that librarianExistsPort method 'librarianExistsByEmail' is called

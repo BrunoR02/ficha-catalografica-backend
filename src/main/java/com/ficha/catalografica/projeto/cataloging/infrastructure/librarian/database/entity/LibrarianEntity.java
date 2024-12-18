@@ -5,12 +5,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
+import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.Sex;
 
@@ -18,7 +21,10 @@ import com.ficha.catalografica.projeto.cataloging.domain.librarian.valueobject.S
 @Builder
 @AllArgsConstructor
 @Entity
-@Table(name = "librarians")
+@ToString
+@Table(name = "librarians", indexes = {
+    @Index(columnList = "email", name = "idx_email")
+})
 public class LibrarianEntity {
 
   @Id
@@ -36,9 +42,9 @@ public class LibrarianEntity {
 
   private String password;
 
-  private LocalDate registeredAt;
+  private LocalDateTime registeredAt;
 
-  private LocalDate updatedAt;
+  private LocalDateTime updatedAt;
 
   private String crb;
 
